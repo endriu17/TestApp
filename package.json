@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "cd client && ng serve",
+    "api": "cd API && dotnet watch run",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run api\""
+  },
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/angular-fontawesome": "^0.8.2"
+  }
+}
