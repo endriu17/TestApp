@@ -5,6 +5,7 @@ import { MembersService } from 'src/app/_services/members.service';
 import { NgxGalleryOptions } from '@kolkov/ngx-gallery';
 import { NgxGalleryImage } from '@kolkov/ngx-gallery';
 import { NgxGalleryAnimation } from '@kolkov/ngx-gallery';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-member-detail',
   templateUrl: './member-detail.component.html',
@@ -14,6 +15,8 @@ export class MemberDetailComponent implements OnInit {
   member: Member;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
+  faArrowLeft = faArrowLeft;
+  faArrowRight = faArrowRight;
 
   constructor(
     private memberService: MembersService,
@@ -29,7 +32,9 @@ export class MemberDetailComponent implements OnInit {
         imagePercent: 100,
         thumbnailsColumns: 4,
         imageAnimation: NgxGalleryAnimation.Slide,
-        preview: false
+        preview: false,
+        arrowPrevIcon: 'fa fa-chevron-left',
+        arrowNextIcon: 'fa fa-chevron-right',
       }
     ];
   }
